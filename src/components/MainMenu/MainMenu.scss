@@ -1,0 +1,79 @@
+@use './src/style/_variables.scss' as *;
+@use './src/style/_mixins.scss' as *;
+
+.main-menu {
+  &__box {
+    width: 270px;
+    @include setFlex(row, space-between);
+    margin-right: 15vw;
+    color: red;
+    transition: 300ms;
+  }
+
+  &__btn {
+    text-decoration: none;
+    font-size: $first-size;
+    font-weight: 600;
+    transition: 300ms;
+
+    &:hover {
+      color: $primary-color;
+      transition: 300ms;
+    }
+  }
+}
+
+.small-menu {
+  &__box {
+    @include setFlex(column);
+  }
+
+  &__icon-btn {
+    text-decoration: none;
+    background-color: transparent;
+    border: none;
+    margin-right: 5vw;
+    cursor: pointer;
+  }
+
+  &__buttons-box {
+    position: fixed;
+    padding-top: 50px;
+    top: 75px;
+    left: 0;
+    height: calc(100vh - 75px);
+    width: 100%;
+    background-color: $dark-background-color;
+    @include setFlex(column, flex-start);
+  }
+
+  &__btn {
+    text-decoration: none;
+    background-color: transparent;
+    border: none;
+    height: 50px;
+    color: $light-text-color;
+    font-size: $third-size;
+    font-weight: 700;
+  }
+}
+
+@media only screen and (max-width: 750px) {
+  .main-menu {
+    &__box {
+      margin-right: 5vw;
+    }
+  }
+}
+
+@media only screen and (min-width: 1921px) {
+  .main-menu {
+    &__box {
+      width: 400px;
+    }
+
+    &__btn {
+      font-size: $fourth-size;
+    }
+  }
+}
