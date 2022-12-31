@@ -1,0 +1,58 @@
+@use './src/style/_variables.scss' as *;
+@use './src/style/_mixins.scss' as *;
+
+.header {
+  &__box {
+    height: 100px;
+    width: 100%;
+    position: fixed;
+    z-index: 2;
+    @include setFlex(row, space-between);
+    transition: 300ms;
+  }
+
+  &__logo {
+    font-size: $fifth-size;
+    font-weight: 700;
+    letter-spacing: 0.1px;
+    margin-left: 15vw;
+    transition: 300ms;
+  }
+}
+
+.after-scroll {
+  &__box {
+    background-color: $text-color;
+    filter: drop-shadow(0 0 2px $text-color);
+    transition: 300ms;
+    height: 75px;
+  }
+}
+
+@media only screen and (max-width: 750px) {
+  .header {
+    &__logo {
+      margin-left: 5vw;
+      transition: 300ms;
+    }
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .header {
+    &__box {
+      background-color: $text-color;
+      filter: drop-shadow(0 0 2px $text-color);
+      transition: 300ms;
+      height: 75px;
+    }
+  }
+}
+
+@media only screen and (min-width: 1921px) {
+  .header {
+    &__logo {
+      font-size: $sixth-size;
+    }
+  }
+}
