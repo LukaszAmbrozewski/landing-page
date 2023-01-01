@@ -25,3 +25,10 @@
     transition: 300ms;
   }
 }
+
+@media only screen and (max-width: 600px) {
+  .home-btn {
+    margin: 0 0 25px 0;
+  }
+}
+
