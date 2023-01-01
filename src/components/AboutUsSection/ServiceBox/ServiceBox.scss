@@ -1,0 +1,52 @@
+@use './src/style/_mixins.scss' as *;
+@use './src/style/_variables.scss' as *;
+
+.service {
+  &__box {
+    width: 325px;
+    height: 142px;
+    border-radius: 5px;
+    margin: 0 16px;
+    background-color: $white;
+    color: $text-color;
+    font-size: $third-size;
+    font-weight: 700;
+    @include setFlex(column, center, center)
+  }
+
+  &__blue {
+    background-color: $secondary-color-1;
+    color: $light-background-color;
+  }
+}
+
+@media only screen and (max-width: 1100px) {
+  .service {
+    &__box {
+      width: 325px;
+      height: 142px;
+      border-radius: 5px;
+      margin: 15px 0;
+    }
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .service {
+    &__box {
+      width: 85vw;
+      height: 142px;
+      border-radius: 5px;
+      margin: 10px 0;
+    }
+  }
+}
+
+@media only screen and (max-width: 350px) {
+  .service {
+    &__box {
+      width: 90vw;
+    }
+  }
+}
+
