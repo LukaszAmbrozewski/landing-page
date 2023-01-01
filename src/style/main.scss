@@ -5,3 +5,8 @@
   width: 100%;
 }
 
+.about-us-section {
+  width: 100%;
+  background-color: $dark-background-color;
+  @include setFlex(column, center, center)
+}
