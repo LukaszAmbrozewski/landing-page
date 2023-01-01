@@ -1,9 +1,11 @@
 import React from "react";
+import { ChooseUsBox } from "./ChooseUsBox/ChooseUsBox";
+import "../../style/main.scss";
 
 export const AboutUsSection = () => {
-    return (
-        <div>
-            <p>About us section</p>
-        </div>
-    );
+  return (
+    <div className="about-us-section">
+      <ChooseUsBox />
+    </div>
+  );
 };
