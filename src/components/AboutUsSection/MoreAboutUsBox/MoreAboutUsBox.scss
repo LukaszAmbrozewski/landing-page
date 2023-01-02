@@ -1,0 +1,86 @@
+@use './src/style/_mixins.scss' as *;
+@use './src/style/_variables.scss' as *;
+
+.more-about-us {
+  &__box {
+    @include setFlex(column, flex-start);
+    margin-top: 200px;
+    width: 95vw;
+  }
+
+  &__header {
+    @include setHeader();
+    max-width: 510px;
+  }
+
+  &__description {
+    @include setDescription();
+    max-width: 510px;
+    margin-top: 15px;
+  }
+
+  &__second-box {
+    @include setFlex(row);
+    flex-wrap: wrap;
+    margin: 100px 30px 0 30px;
+  }
+
+  &__field-box {
+    width: calc(100vw - 1110px);
+    min-width: 330px;
+    max-width: 600px;
+    margin-left: 120px;
+  }
+
+  &__field-header {
+    @include setHeader(left)
+  }
+
+  &__field-description {
+    @include setDescription(left);
+    margin-top: 10px;
+    margin-bottom: 50px;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .more-about-us {
+    &__second-box {
+      @include setFlex(column);
+      margin: 100px 10px 0 10px;
+      width: calc(100vw - 20px);
+    }
+
+    &__field-box {
+      min-width: 550px;
+      margin: 72px 0 0 0;
+    }
+
+    &__field-header {
+      @include setHeader()
+    }
+
+    &__field-description {
+      @include setDescription();
+    }
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .more-about-us {
+    &__header {
+      width: 95vw;
+    }
+
+    &__description {
+      width: 95vw;
+    }
+
+    &__field-box {
+      width: 100%;
+      min-width: 250px;
+      margin-left: 0;
+      margin-right: 0;
+    }
+  }
+}
