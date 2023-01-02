@@ -1,6 +1,26 @@
+@use './_variables.scss' as *;
+
 @mixin setFlex($flex-direction, $justify-content: center, $align-items: center) {
   display: flex;
   flex-direction: $flex-direction;
   justify-content: $justify-content;
   align-items: $align-items;
+}
+
+@mixin setHeader($text-align: center) {
+  line-height: 57px;
+  font-size: $seventh-size;
+  font-weight: 700;
+  text-align: $text-align;
+  @media only screen and (max-width: 600px) {
+    font-size: $sixth-size;
+    line-height: 40px;
+  }
+}
+
+@mixin setDescription($text-align: center) {
+  line-height: 20px;
+  font-size: $first-size;
+  font-weight: 500;
+  text-align: $text-align;
 }
