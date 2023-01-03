@@ -8,5 +8,13 @@
 .about-us-section {
   width: 100%;
   background-color: $dark-background-color;
-  @include setFlex(column, center, center)
+  @include setFlex(column, center, center);
+  padding-bottom: 125px;
+}
+
+
+.advice-section {
+  width: 100%;
+  background-color: $dark-background-color;
+  @include setFlex(column, center, center);
 }
