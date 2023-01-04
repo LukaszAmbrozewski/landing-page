@@ -1,0 +1,102 @@
+@use './src/style/_mixins.scss' as *;
+@use './src/style/_variables.scss' as *;
+
+.info {
+  &__box {
+    width: calc(100% - 40px);
+    background-color: $secondary-color-2;
+    padding: 50px 20px 40px 20px;
+    @include setFlex(row, center, flex-start);
+    margin-top: 42px;
+  }
+
+  &__group {
+    @include setFlex(row, center, flex-start);
+  }
+
+  &__one {
+    @include setFlex(column, flex-start, flex-start);
+    width: 212px;
+  }
+
+  &__header {
+    font-size: $third-size;
+    font-weight: 700;
+    line-height: 24px;
+    margin-bottom: 20px;
+  }
+
+  &__link {
+    text-decoration: none;
+    font-weight: 600;
+    font-size: $first-size;
+    line-height: 24px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: 300ms;
+
+    &:hover {
+      color: $primary-color;
+      transition: 300ms;
+    }
+  }
+
+  &__contact-link {
+    @include setFlex(row);
+  }
+
+  &__icon {
+    margin-right: 10px;
+  }
+}
+
+@media only screen and (max-width: 1100px) {
+  .info {
+    &__box {
+      @include setFlex(column, center, center);
+      padding: 50px 20px 0 20px;
+    }
+
+    &__group {
+      margin-bottom: 40px;
+    }
+
+    &__one {
+      width: 180px;
+      margin-left: 32px;
+    }
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .info {
+    &__one {
+      @include setFlex(column, flex-start, flex-start);
+      width: 160px;
+    }
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .info {
+    &__group {
+      @include setFlex(column, center, flex-start);
+      margin-bottom: 0;
+    }
+
+    &__one {
+      @include setFlex(column, flex-start, center);
+      width: 212px;
+      margin-bottom: 40px;
+      margin-left: 0;
+    }
+
+    &__contact-link {
+      width: 90vw;
+      text-align: center;
+    }
+  }
+}
+
+
+
