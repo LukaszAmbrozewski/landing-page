@@ -1,0 +1,76 @@
+@use './src/style/_mixins.scss' as *;
+@use './src/style/_variables.scss' as *;
+
+.one-contact-way {
+  &__box {
+    width: 328px;
+    height: 333px;
+    background-color: $light-background-color;
+    @include setFlex(column);
+    color: $text-color;
+  }
+
+  &__icon {
+    margin-bottom: 15px;
+  }
+
+  &__mail {
+    font-size: $first-size;
+    font-weight: 600;
+    color: $text-color;
+    line-height: 24px;
+  }
+
+  &__description {
+    font-size: $third-size;
+    font-weight: 700;
+    line-height: 24px;
+    margin: 15px 0 15px 0;
+    color: $text-color;
+  }
+
+  &__button {
+    padding: 10px 20px;
+    border: 1px solid $primary-color;
+    border-radius: 5px;
+    color: $primary-color;
+    font-weight: 600;
+    font-size: $first-size;
+  }
+
+  &__box-blue {
+    height: 393px;
+    background-color: $secondary-color-1;
+    color: $light-text-color;
+  }
+
+  &__mail-blue {
+    color: $light-text-color;
+  }
+
+  &__description-blue {
+    color: $light-text-color;
+  }
+
+  &__button-blue {
+    border: 1px solid $light-background-color;
+    color: $light-text-color;
+    background-color: transparent;
+  }
+}
+
+@media only screen and (max-width: 1100px) {
+  .one-contact-way {
+    &__box {
+      margin-bottom: 30px;
+    }
+  }
+}
+
+@media only screen and (max-width: 360px) {
+  .one-contact-way {
+    &__box {
+      width: 90vw;
+    }
+  }
+}

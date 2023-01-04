@@ -4,6 +4,7 @@ import { HomeSection } from "../../components/HomeSection/HomeSection";
 import { AboutUsSection } from "../../components/AboutUsSection/AboutUsSection";
 import "../../style/main.scss";
 import { AdviceSection } from "../../components/AdviceSection/AdviceSection";
+import { ContactSection } from "../../components/ContactSection/ContactSection";
 
 export const Main = () => {
   return (
@@ -19,6 +20,9 @@ export const Main = () => {
       </section>
       <section id="advice">
         <AdviceSection />
+      </section>
+      <section id="contact">
+        <ContactSection />
       </section>
     </div>
   );
