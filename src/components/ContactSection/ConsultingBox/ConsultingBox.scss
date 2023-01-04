@@ -28,6 +28,13 @@
     border-radius: 5px;
     border: 0;
     color: $light-text-color;
+    transition: 100ms;
+    cursor: pointer;
+
+    &:hover {
+      background-color: $primary-color-hover;
+      transition: 100ms;
+    }
   }
 }
 

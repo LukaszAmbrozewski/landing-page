@@ -30,11 +30,27 @@ body {
 ol, ul {
   list-style: none;
 }
+
 blockquote, q {
   quotes: none;
 }
+
 blockquote:before, blockquote:after,
 table {
   border-collapse: collapse;
   border-spacing: 0;
+}
+
+::-webkit-scrollbar {
+  width: 3px;
+  height: 3px;
+}
+
+::-webkit-scrollbar-track {
+  background: #252B42;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #FFA62B;
+  height: 10px;
 }

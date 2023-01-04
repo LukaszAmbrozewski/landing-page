@@ -11,7 +11,13 @@
     color: $text-color;
     font-size: $third-size;
     font-weight: 700;
-    @include setFlex(column, center, center)
+    @include setFlex(column, center, center);
+    transition: 300ms;
+
+    &:hover {
+      transform: scale(1.05);
+      transition: 300ms;
+    }
   }
 
   &__blue {
