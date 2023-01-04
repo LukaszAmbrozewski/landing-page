@@ -1,0 +1,53 @@
+@use './src/style/_mixins.scss' as *;
+@use './src/style/_variables.scss' as *;
+
+.consulting {
+  &__box {
+    @include setFlex(row, space-between);
+    width: 1050px;
+    margin-top: 188px;
+  }
+
+  &__header {
+    font-size: $fifth-size;
+    font-weight: 700;
+    line-height: 32px;
+  }
+
+  &__description {
+    margin-top: 10px;
+    @include setDescription(left)
+  }
+
+  &__button {
+    padding: 15px 45px;
+    font-size: $first-size;
+    font-weight: 700;
+    line-height: 28px;
+    background-color: $primary-color;
+    border-radius: 5px;
+    border: 0;
+    color: $light-text-color;
+    transition: 100ms;
+    cursor: pointer;
+
+    &:hover {
+      background-color: $primary-color-hover;
+      transition: 100ms;
+    }
+  }
+}
+
+@media only screen and (max-width: 1100px) {
+  .consulting {
+    &__box {
+      @include setFlex(column);
+      margin-top: 130px;
+      width: 88%;
+    }
+
+    &__button {
+      margin-top: 50px;
+    }
+  }
+}

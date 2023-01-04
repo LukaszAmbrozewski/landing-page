@@ -1,0 +1,32 @@
+@use './src/style/_mixins.scss' as *;
+@use './src/style/_variables.scss' as *;
+
+.get-in-touch {
+  &__box {
+    @include setFlex(column);
+  }
+
+  &__header {
+    @include setHeader();
+    margin-top: 100px;
+  }
+
+  &__description {
+    @include setDescription();
+    margin: 10px 10px 0 10px;
+  }
+
+  &__contact-ways {
+    @include setFlex(row);
+    margin-top: 80px;
+  }
+}
+
+@media only screen and (max-width: 1100px) {
+  .get-in-touch {
+    &__contact-ways {
+      @include setFlex(column);
+      margin-top: 80px;
+    }
+  }
+}

@@ -1,0 +1,32 @@
+@use './src/style/_mixins.scss' as *;
+@use './src/style/_variables.scss' as *;
+
+.one-field {
+  &__box {
+    width: 100%;
+    @include setFlex(row, flex-start, flex-start);
+    margin-bottom: 30px;
+  }
+
+  &__title {
+    font-size: $third-size;
+    font-weight: 700;
+    line-height: 24px;
+    margin-left: 20px;
+  }
+
+  &__description {
+    font-weight: 600;
+    font-size: $first-size;
+    line-height: 24px;
+    margin-left: 20px;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .one-field {
+    &__box {
+      @include setFlex(row, center, flex-start);
+    }
+  }
+}

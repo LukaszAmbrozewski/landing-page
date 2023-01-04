@@ -1,0 +1,153 @@
+@use './src/style/_variables.scss' as *;
+@use './src/style/_mixins.scss' as *;
+
+
+.home-box {
+  background-image: url('/../public/images/home-background.svg');
+  background-size: cover;
+  background-position: bottom center;
+  height: 100vh;
+  min-height: 900px;
+  width: 100%;
+  @include setFlex(column, center, flex-start);
+  color: $light-text-color;
+  position: relative;
+
+  &__description-section {
+    margin-left: calc((100vw - 1450px) / 2);
+  }
+
+  &__main-header {
+    font-size: $ninth-size;
+    font-weight: 800;
+    max-width: 510px;
+    line-height: 80px;
+  }
+
+  &__person-image {
+    position: absolute;
+    bottom: 0;
+    margin-left: calc(((100vw - 1450px) / 2) + 550px);
+    height: 80%;
+    min-height: 800px;
+  }
+
+  &__description {
+    font-size: 20px;
+    max-width: 375px;
+    font-weight: 500;
+    line-height: 30px;
+    margin-top: 35px;
+  }
+
+  &__buttons-box {
+    margin-top: 35px;
+  }
+}
+
+
+@media only screen and (max-width: 1800px) {
+  .home-box {
+    &__person-image {
+      margin-left: calc(((100vw - 1550px) / 2) + 550px);
+    }
+  }
+}
+
+@media only screen and (max-width: 1600px) {
+  .home-box {
+    &__description-section {
+      margin-left: calc((100vw - 1300px) / 2);
+    }
+
+    &__person-image {
+      margin-left: calc(((100vw - 1500px) / 2) + 550px);
+      height: 750px;
+      min-height: 750px;
+    }
+  }
+}
+
+@media only screen and (max-width: 1350px) {
+  .home-box {
+    min-height: 800px;
+
+    &__description-section {
+      margin-left: calc((100vw - 1150px) / 2);
+    }
+
+    &__person-image {
+      margin-left: calc(((100vw - 1450px) / 2) + 550px);
+      height: 690px;
+      min-height: 690px;
+    }
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .home-box {
+    height: 100vh;
+    min-height: 1150px;
+    @include setFlex(column, space-between, center);
+
+    &__description-section {
+      text-align: center;
+      margin: 150px 10px 0 10px;
+      @include setFlex(column, space-between, center);
+    }
+
+    &__description {
+      text-align: center;
+      width: 100%;
+      max-width: 375px;
+      @include setFlex(column, center, center);
+    }
+
+    &__person-image {
+      position: static;
+      margin-bottom: 0;
+      min-height: 600px;
+      height: 600px;
+      margin-left: 0;
+    }
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .home-box {
+    min-height: 1050px;
+
+    &__person-image {
+      position: static;
+      min-height: 500px;
+      height: 500px;
+    }
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .home-box {
+    &__main-header {
+      font-size: $seventh-size;
+      line-height: 60px;
+
+    }
+
+    &__person-image {
+      position: static;
+      height: auto;
+      width: 100%;
+      min-height: 400px;
+      object-fit: cover;
+      object-position: top center;
+    }
+
+    &__buttons-box {
+      margin-top: 35px;
+      @include setFlex(column, center, center);
+    }
+  }
+}
+
+
+

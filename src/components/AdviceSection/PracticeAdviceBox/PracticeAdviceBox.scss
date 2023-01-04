@@ -1,0 +1,56 @@
+@use './src/style/_mixins.scss' as *;
+@use './src/style/_variables.scss' as *;
+
+.practice-advice {
+  &__header {
+    @include setHeader();
+    margin-top: 100px;
+  }
+
+  &__description {
+    @include setDescription();
+    margin-top: 10px;
+  }
+
+  &__advices-box {
+    @include setFlex(row, center, flex-start);
+    margin-top: 45px;
+  }
+
+  &__couple {
+    @include setFlex(row, center, flex-start);
+  }
+}
+
+@media only screen and (max-width: 1100px) {
+  .practice-advice {
+    &__advices-box {
+      @include setFlex(column, center, flex-start);
+    }
+
+    &__couple {
+      margin-bottom: 30px;
+    }
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .practice-advice {
+    &__advices-box {
+      @include setFlex(column, center, center);
+    }
+
+    &__couple {
+      @include setFlex(column, center, flex-start);
+      margin-bottom: 0;
+    }
+
+    &__header {
+      margin: 100px 10px 0 10px;
+    }
+
+    &__description {
+      margin: 10px 10px 0 10px;
+    }
+  }
+}

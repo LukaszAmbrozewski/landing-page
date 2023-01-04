@@ -1,0 +1,44 @@
+@use './src/style/_mixins.scss' as *;
+@use './src/style/_variables.scss' as *;
+
+.one-advice {
+  &__box {
+    width: 230px;
+    margin: 0 20px;
+    @include setFlex(column);
+    background-color: $light-background-color;
+  }
+
+  &__header {
+    color: $text-color;
+    font-weight: 700;
+    text-align: left;
+    margin: 30px 30px 15px 30px;
+    font-size: $third-size;
+  }
+
+  &__description {
+    margin: 0 30px 30px 30px;
+    color: $second-text-color;
+    font-size: $first-size;
+    font-weight: 500;
+    text-align: left;
+  }
+
+  &__image {
+    max-height: 138px;
+    width: 100%;
+    object-fit: cover;
+    object-position: bottom center;
+
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .one-advice {
+    &__box {
+      width: 230px;
+      margin: 0 20px 20px 20px;
+    }
+  }
+}
